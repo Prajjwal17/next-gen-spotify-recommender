@@ -1,0 +1,11 @@
+Pseudo-code for Sessionization:
+
+1. Sort interactions by user_id, timestamp.
+2. For each user:
+       start new session
+       for each interaction:
+            if gap > 30 minutes:
+                start new session
+            assign session_id
+            assign position within session
+3. Output: user_id, session_id, position, track_id, timestamp, metadata
